@@ -13,14 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-Route::get('/', [App\Http\Controllers\BlogController::class, 'home']);
-
-Route::get('/post/new', function () {
-    return view('post-form');
+Route::get('/', function () {
+    return view('welcome');
 });
 
-Route::post('/post/new', [App\Http\Controllers\BlogController::class, 'savePost']);
+// Route::get('/', [App\Http\Controllers\BlogController::class, 'home']);
+
+// Route::get('/post/new', function () {
+//     return view('post-form');
+// });
+
+// Route::post('/post/new', [App\Http\Controllers\BlogController::class, 'savePost']);

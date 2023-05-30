@@ -14,8 +14,13 @@
     </form>
     @forelse ($posts as $post)
       <div class="card mt-3">
+
+        <div class="card-head">
+          <h5 class="card-title">{{ $post["title"] }}</h5>              
+          <button class="btn btn-secondary">Update</button>             
+          <button class="btn btn-danger">Delete</button>
+        </div>
         <div class="card-body">
-          <h5 class="card-title">{{ $post["title"] }}</h5>
           <p class="card-text">
             {{ Illuminate\Support\Str::limit($post["content"], $limit = 500, $end = '...') }}
           </p>
@@ -23,6 +28,7 @@
       </div>
     @empty
       <div class="card mt-3">
+        
         <div class="card-body">
           There are no records available
         </div>
